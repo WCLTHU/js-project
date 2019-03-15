@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>战舰世界梦想版</title>
+</head>
+<body>
+    <script>
+    var location1,location2,location3
+    var guess
+    var guesses
+    var hits
+    guess = -1
+    guesses = 0
+    hits = 0
+    location1 = Math.floor(Math.random()*5)
+    location2 = location1 + 1
+    location3 = location2 + 1
+    while ( hits < 3 ){
+        guess = prompt("向哪里开炮？ (0-6):")
+        if (guess>=0&&guess<=6){
+            if (guess == location1 || guess == location2 || guess == location3){
+                hits = hits + 1
+                alert("被打中了啦")
+            }else{
+                alert("嘿嘿，你打不中我")
+            }
+            guesses = guesses + 1
+        }else{
+            alert("请输入有效数值")
+        }
+    }
+    alert("战舰被击沉，共计开炮"+guesses+"次")
+    </script>
+</body>
+</html>
