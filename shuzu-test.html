@@ -7,18 +7,37 @@
 </head>
 <body>
     <script>
-      function makePhrases() {
-        var name=['孙权','濮徐杰','顾伟豪','杨吉','孔易飞']
+        function action(){
+        var male=['孙权','濮徐杰','顾伟豪','杨吉','孔易飞']
         var time=['早上','中午','晚上']
-        var site=['在教室','在宿舍','在操场','在厕所']
-        var activity=['吃饭','睡觉','玩游戏','看书','洗澡','嘿嘿嘿','摔跤']
-        var phrase=chooseRandStrInArray(name)+""+chooseRandsssssssStrInArray(time)+""+chooseRandStrInArray(site)+""+chooseRandStrInArray(activity)
-        document.write(phrase)
-        function chooseRandStrInArray(array){
-          return array[Math.floor(Math.random()*array.length)]
+        var where=['在教室','在宿舍','在操场','在厕所']
+        var site=['吃饭','睡觉','玩游戏','看书','洗澡','嘿嘿嘿','摔跤']
+        function stochastic(guess){
+            return guess[Math.floor(Math.random()*guess.length)]
         }
-      }
-      makePhrases()
+        var result=stochastic(male)+''+stochastic(time)+''+stochastic(where)+''+stochastic(site)
+        document.write(result)
+        }
+        action()
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //var a=male[Math.floor(Math.random()*male.length)]
+        //var b=time[Math.floor(Math.random()*time.length)]
+        //var c=where[Math.floor(Math.random()*where.length)]
+        //var d=site[Math.floor(Math.random()*site.length)]
+        //document.write(a+b+c+d)
+
+
     </script>
 </body>
 </html>
