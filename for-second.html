@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numerical value</title>
 </head>
 <body>
-  <script>
-    var highest=0
-    var item=0
-    var scroes=[1,2,3,4,5,6,7,8,9,10,11,12,200,14,15,16,17,18,19,20,100]
-    for (var i=0;i<scroes.length;i++){
-      if(scroes[i]>highest){
-        highest=scroes[i]
-        item=[i]
+    <script>
+      var highest = 0
+      var xiabiao=[]
+      var j=0
+      var scores = [1,200,200,200,200,200,100,200,60,80,200]
+      for (var i=0;i<scores.length;i++){
+        if(scores[i]>highest){
+            highest=scores[i]
+            xiabiao=[]
+            j=0
+            xiabiao[j]=i
+        }else if (scores[i]==highest){
+            j++
+            xiabiao[j]=i
+        }
       }
-    }
-    document.write('最大数是'+highest+','+'最高项是'+item)
-  </script>
+      for(var k=0;k<xiabiao.length;k++){
+          document.write('scores['+xiabiao[k]+']='+highest+'<br>')
+      }
+    </script>
 </body>
 </html>
