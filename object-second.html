@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id='amao'>我是一段文字</p>
+    <div id='agou'></div>
+    <script>
+        var Psign=document.getElementById('amao')
+        Psign.innerHTML='我是被替换的，没文字'
+        Psign.setAttribute('style','color:red')
+        var Divsign=document.getElementById('agou')
+        Divsign.innerHTML='第二段文字'
+        Divsign.setAttribute('style','color:green')
+    </script>
+</body>
+</html>
